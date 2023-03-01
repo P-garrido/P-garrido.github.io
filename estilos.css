@@ -1,0 +1,408 @@
+:root{
+	--colorPagina: #5dc1b9;
+}
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+	min-height: calc(100vh - 4em);
+	padding-top: 4em;
+}
+
+/*Menú fijo arriba*/
+
+
+/*Menú escritorio*/
+
+.menu-responsive{
+	display: none;
+}
+
+header{
+	display: flex;
+	background-color: var(--colorPagina);
+	justify-content: space-between;
+	align-items: center;
+	padding: .5em 0;
+	width: 100%;
+	box-shadow: 0 .5em 1em 0 #4445;
+	min-height: 4em;
+	position: fixed;
+	margin-top: -4em;
+	z-index: 50;
+}
+
+a{
+	text-decoration: none;
+	color: #000;
+}
+
+nav{
+	margin-right: 1em;
+	font-size: 1.1em;
+}
+
+nav ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 1em;
+	position: relative;
+}
+
+/*Efecto subrayado de menú*/
+nav ul li::before{
+	content: "";
+	height: .2em;
+	width: 0%;
+	background-color: #fff;
+	position: absolute;
+	left: 0;
+	bottom: -1.7em;
+	transition: 0.4s ease-out;
+}
+
+nav ul li:hover::before{
+	width: 100%;
+}
+
+nav ul li a:hover{
+	color: #fff;
+}
+
+nav ul li.activo::before{
+	width: 100%;
+}
+
+nav ul li.activo > a{
+	color: #fff;
+}
+
+.logo_img{
+	height: 4em;
+}
+
+
+/*Banner*/
+
+.banner{
+	display: flex;
+	height: 25vh;
+	background-image: url(fondo.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	justify-content: center;
+	align-items: center;
+	color: #222;
+	font-size: 1.5em;
+}
+
+
+/*Secciones (divs celestes bordes redondeados)*/
+
+.seccion{
+	margin: 2em;
+	background-color: var(--colorPagina);
+	border-radius: .5em;
+	padding: 1em;
+}
+
+.seccion > h2{
+	text-align: center;
+}
+
+.seccion p{
+	padding: 1em 0;
+}
+
+h2{
+	font-family: Tahoma, sans-serif;
+
+}
+
+
+
+/*Muestra de productos inicio*/
+
+.productos{
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.productos div img{
+	transition-property: height width;
+	transition-duration: .3s;
+	height: 15em;
+	width: 15em;
+	object-fit: scale-down;
+}
+
+.productos  div img:hover{
+	transform: scale(0.9);
+}
+
+.productos h2{
+	grid-column: 1/span 3;
+}
+
+
+
+.productos div{
+	text-align: center;
+}
+
+
+/*Contacto*/
+
+.contacto p{
+	display: inline-block;
+}
+
+.contacto i{
+	margin-right: .5em;
+}
+
+.contacto li{
+	list-style: none;
+	display: inline-block;
+}
+
+.contacto li:hover{
+	color: #fff;
+}
+
+.contacto li:hover > a{
+	color: #fff;
+}
+
+.contacto > h2{
+	text-align: left;
+}
+
+
+/*Venta*/
+
+.venta{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-items: center;
+}
+
+.venta img{
+	height: 15em;
+	width: 15em;
+	object-fit: scale-down;
+}
+
+.venta h2{
+	grid-column: 1/span 2;
+	padding: 1em 0;
+}
+
+.descripcion{
+	justify-self: start;
+	align-self: center;
+}
+
+.descripcion p{
+	padding: .7em 0;
+}
+
+/*Boton*/
+
+.bn3637 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  backface-visibility: hidden;
+  border: 0.3rem solid transparent;
+  border-radius: 3rem;
+  z-index: 0;
+}
+
+.bn36 {
+  border-color: #fff;
+  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+}
+
+.bn36:hover {
+  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+}
+
+
+/*Contrato de servicios*/
+
+.mantenimiento p{
+	padding: 1em 0;
+}
+
+.contenedor-contrato{
+	text-align: center;
+}
+
+
+
+/*Pie de página*/
+
+
+footer{
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--colorPagina);
+	align-items: center;
+	padding: .5em;
+	min-height: 3em;
+	margin-top: auto;
+}
+
+footer h2{
+	color: #222;
+}
+
+.logo{
+	display: flex;
+	height: 4em;
+	align-items: center;
+}
+
+
+/*Logo mío*/
+
+.desarrollador{
+	display: flex;
+	align-items: center;
+}
+
+.desarrollador__link{
+	transition-property: background transform;
+	transition-duration: 1s;
+	display: inline-block;
+}
+.desarrollador__link:hover{
+	transform: translateY(-0.5em) skew(-20deg);
+	background-color: #ccc;
+	
+}
+
+.desarrollador__link a:hover{
+	color: #000;
+}
+
+
+
+/*Adaptación a celulares*/
+
+@media screen and (max-width: 1000px){
+
+	/*Sección muestra productos para celulares*/
+	.productos{
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 2fr 2fr 2fr;
+		align-items: center;
+		grid-auto-flow: column;
+	}
+
+	.productos h2{
+		grid-column: 1/span 2;
+	}
+
+	
+
+}
+
+
+
+@media screen and (max-width: 550px){
+
+	/*Menú responsive*/
+
+
+	header{
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	nav ul li{
+		margin: 0 .5em;
+	}
+
+	nav ul li::before{
+		content: "";
+		height: 0;
+		width: 0;
+	}
+
+	nav ul li:hover::before{
+		width: 0;
+	}
+
+	/*Banner responsive*/
+
+	.banner{
+		text-align: center;
+		margin-top: 1.5em;
+	}
+
+
+	/*pie para celulares*/
+
+
+	footer{
+		flex-direction: column;
+		justify-content: center;
+		padding-bottom: 3em;
+	}
+
+	.desarrollador__link:hover{
+		transform: translateY(0) skew(0);
+		background-color:transparent;
+	
+	}
+
+	/*Contacto para celulares*/
+
+	.contacto{
+		height: 15em;
+	}
+
+	.contacto ul{
+		padding-top: 1em;
+		padding-bottom: 1em;
+	}
+
+	.contacto ul li{
+		padding: .7em 0;
+	}
+
+
+	/*Sección de ventas*/
+
+
+	.venta{
+		grid-template-columns: 1fr;
+		grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
+	}
+
+	.venta h2{
+		grid-column: 1 / 2;
+	}
+
+	.descripcion{
+		justify-self: center;
+	}
+
+
+
+}

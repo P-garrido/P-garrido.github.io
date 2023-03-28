@@ -13,7 +13,7 @@ body{
 	flex-direction: column;
 	min-height: calc(100vh - 4em);
 	padding-top: 4em;
-	line-height: 2;
+	line-height: 20px;
 }
 
 /*Menú fijo arriba*/

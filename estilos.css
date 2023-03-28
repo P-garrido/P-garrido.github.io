@@ -169,16 +169,12 @@ h2{
 	margin-right: .5em;
 }
 
-.contacto li{
-	list-style: none;
-	display: inline-block;
-}
 
-.contacto li:hover{
+.link:hover{
 	color: #fff;
 }
 
-.contacto li:hover > a{
+.link:hover > a{
 	color: #fff;
 }
 

@@ -26,7 +26,7 @@ body{
 
 header{
 	display: flex;
-	background-color: var(--colorPagina);
+	background-color: red;
 	justify-content: space-between;
 	align-items: center;
 	padding: .5em 0;
@@ -118,7 +118,6 @@ nav ul li.activo > a{
 
 .seccion p{
 	padding: 1em 0;
-	line-height: 2;
 }
 
 h2{

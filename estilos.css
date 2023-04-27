@@ -1,13 +1,13 @@
-:root{
+:root {
 	--colorPagina: #5dc1b9;
 }
 
-*{
+* {
 	margin: 0;
 	padding: 0;
 }
 
-body{
+body {
 	background-color: #fff;
 	display: flex;
 	flex-direction: column;
@@ -21,11 +21,11 @@ body{
 
 /*Menú escritorio*/
 
-.menu-responsive{
+.menu-responsive {
 	display: none;
 }
 
-header{
+header {
 	display: flex;
 	background-color: var(--colorPagina);
 	justify-content: space-between;
@@ -39,18 +39,18 @@ header{
 	z-index: 50;
 }
 
-a{
+a {
 	text-decoration: none;
 	color: #000;
 }
 
-nav{
+nav {
 	margin-right: 1em;
 	font-size: 1.1em;
 	line-height: 1.15;
 }
 
-nav ul li{
+nav ul li {
 	list-style: none;
 	display: inline-block;
 	margin: 0 1em;
@@ -58,7 +58,7 @@ nav ul li{
 }
 
 /*Efecto subrayado de menú*/
-nav ul li::before{
+nav ul li::before {
 	content: "";
 	height: .2em;
 	width: 0%;
@@ -69,30 +69,30 @@ nav ul li::before{
 	transition: 0.4s ease-out;
 }
 
-nav ul li:hover::before{
+nav ul li:hover::before {
 	width: 100%;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
 	color: #fff;
 }
 
-nav ul li.activo::before{
+nav ul li.activo::before {
 	width: 100%;
 }
 
-nav ul li.activo > a{
+nav ul li.activo>a {
 	color: #fff;
 }
 
-.logo_img{
+.logo_img {
 	height: 4em;
 }
 
 
 /*Banner*/
 
-.banner{
+.banner {
 	display: flex;
 	height: 25vh;
 	background-image: url(fondo.jpg);
@@ -107,22 +107,28 @@ nav ul li.activo > a{
 
 /*Secciones (divs celestes bordes redondeados)*/
 
-.seccion{
+.seccion {
+	display: grid;
+	place-items: center;
+	align-items: center;
 	margin: 2em;
 	background-color: var(--colorPagina);
 	border-radius: .5em;
 	padding: 1em;
+	min-height: 100vh;
+	transition: filter 1.5s, transform 1.5s, filter 1.5s;
+	font-size: 1.1em;
 }
 
-.seccion > h2{
+.seccion>h2 {
 	text-align: center;
 }
 
-.seccion p{
+.seccion p {
 	padding: 1em 0;
 }
 
-h2{
+h2 {
 	font-family: Tahoma, sans-serif;
 
 }
@@ -131,12 +137,12 @@ h2{
 
 /*Muestra de productos inicio*/
 
-.productos{
+.productos {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 }
 
-.productos div img{
+.productos div img {
 	transition-property: height width;
 	transition-duration: .3s;
 	height: 15em;
@@ -144,109 +150,109 @@ h2{
 	object-fit: scale-down;
 }
 
-.productos  div img:hover{
+.productos div img:hover {
 	transform: scale(0.9);
 }
 
-.productos h2{
+.productos h2 {
 	grid-column: 1/span 3;
 }
 
 
 
-.productos div{
+.productos div {
 	text-align: center;
 }
 
 
 /*Contacto*/
 
-.contacto p{
+.contacto p {
 	display: inline-block;
 }
 
-.contacto i{
+.contacto i {
 	margin-right: .5em;
 }
 
 
-.link:hover{
+.link:hover {
 	color: #fff;
 }
 
-.link:hover > a{
+.link:hover>a {
 	color: #fff;
 }
 
-.contacto > h2{
+.contacto>h2 {
 	text-align: left;
 }
 
 
 /*Venta*/
 
-.venta{
+.venta {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-items: center;
 }
 
-.venta img{
+.venta img {
 	height: 15em;
 	width: 15em;
 	object-fit: scale-down;
 }
 
-.venta h2{
+.venta h2 {
 	grid-column: 1/span 2;
 	padding: 1em 0;
 }
 
-.descripcion{
+.descripcion {
 	justify-self: start;
 	align-self: center;
 }
 
-.descripcion p{
+.descripcion p {
 	padding: .7em 0;
 }
 
 /*Boton*/
 
 .bn3637 {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.7rem 2rem;
-  font-family: "Poppins", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  text-align: center;
-  text-decoration: none;
-  color: #fff;
-  backface-visibility: hidden;
-  border: 0.3rem solid transparent;
-  border-radius: 3rem;
-  z-index: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.7rem 2rem;
+	font-family: "Poppins", sans-serif;
+	font-weight: 700;
+	font-size: 18px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	backface-visibility: hidden;
+	border: 0.3rem solid transparent;
+	border-radius: 3rem;
+	z-index: 0;
 }
 
 .bn36 {
-  border-color: #fff;
-  transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
+	border-color: #fff;
+	transition: transform 0.2s cubic-bezier(0.235, 0, 0.05, 0.95);
 }
 
 .bn36:hover {
-  transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
+	transform: perspective(1px) scale3d(1.044, 1.044, 1) translateZ(0) !important;
 }
 
 
 /*Contrato de servicios*/
 
-.mantenimiento p{
+.mantenimiento p {
 	padding: 1em 0;
 }
 
-.contenedor-contrato{
+.contenedor-contrato {
 	text-align: center;
 }
 
@@ -255,7 +261,7 @@ h2{
 /*Pie de página*/
 
 
-footer{
+footer {
 	display: flex;
 	justify-content: space-between;
 	background-color: var(--colorPagina);
@@ -265,11 +271,11 @@ footer{
 	margin-top: auto;
 }
 
-footer h2{
+footer h2 {
 	color: #222;
 }
 
-.logo{
+.logo {
 	display: flex;
 	height: 4em;
 	align-items: center;
@@ -278,23 +284,24 @@ footer h2{
 
 /*Logo mío*/
 
-.desarrollador{
+.desarrollador {
 	display: flex;
 	align-items: center;
 }
 
-.desarrollador__link{
+.desarrollador__link {
 	transition-property: background transform;
 	transition-duration: 1s;
 	display: inline-block;
 }
-.desarrollador__link:hover{
+
+.desarrollador__link:hover {
 	transform: translateY(-0.5em) skew(-20deg);
 	background-color: #ccc;
-	
+
 }
 
-.desarrollador__link a:hover{
+.desarrollador__link a:hover {
 	color: #000;
 }
 
@@ -302,53 +309,53 @@ footer h2{
 
 /*Adaptación a celulares*/
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
 
 	/*Sección muestra productos para celulares*/
-	.productos{
+	.productos {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 2fr 2fr 2fr;
 		align-items: center;
 		grid-auto-flow: column;
 	}
 
-	.productos h2{
+	.productos h2 {
 		grid-column: 1/span 2;
 	}
 
-	
+
 
 }
 
 
 
-@media screen and (max-width: 550px){
+@media screen and (max-width: 550px) {
 
 	/*Menú responsive*/
 
 
-	header{
+	header {
 		flex-direction: column;
 		justify-content: space-between;
 	}
 
-	nav ul li{
+	nav ul li {
 		margin: 0 .5em;
 	}
 
-	nav ul li::before{
+	nav ul li::before {
 		content: "";
 		height: 0;
 		width: 0;
 	}
 
-	nav ul li:hover::before{
+	nav ul li:hover::before {
 		width: 0;
 	}
 
 	/*Banner responsive*/
 
-	.banner{
+	.banner {
 		text-align: center;
 		margin-top: 1.5em;
 	}
@@ -357,30 +364,30 @@ footer h2{
 	/*pie para celulares*/
 
 
-	footer{
+	footer {
 		flex-direction: column;
 		justify-content: center;
 		padding-bottom: 3em;
 	}
 
-	.desarrollador__link:hover{
+	.desarrollador__link:hover {
 		transform: translateY(0) skew(0);
-		background-color:transparent;
-	
+		background-color: transparent;
+
 	}
 
 	/*Contacto para celulares*/
 
-	.contacto{
+	.contacto {
 		height: 15em;
 	}
 
-	.contacto ul{
+	.contacto ul {
 		padding-top: 1em;
 		padding-bottom: 1em;
 	}
 
-	.contacto ul li{
+	.contacto ul li {
 		padding: .7em 0;
 	}
 
@@ -388,19 +395,32 @@ footer h2{
 	/*Sección de ventas*/
 
 
-	.venta{
+	.venta {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr 2fr 2fr 2fr 2fr;
 	}
 
-	.venta h2{
+	.venta h2 {
 		grid-column: 1 / 2;
 	}
 
-	.descripcion{
+	.descripcion {
 		justify-self: center;
 	}
 
 
 
+}
+
+
+.hidden {
+	opacity: 0;
+	transform: translateX(-100%);
+	filter: blur(5px);
+}
+
+.show {
+	opacity: 1;
+	transform: translateX(0);
+	filter: blur(0);
 }
